@@ -1,0 +1,37 @@
+/* Estilos globais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos para cabeçalho */
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+/* Estilos para rodapé */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Estilos para a seção de dados */
+#data-container {
+    padding: 20px;
+}
+
+/* Estilos para os dados do tanque */
+#dados-tanque {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+}
