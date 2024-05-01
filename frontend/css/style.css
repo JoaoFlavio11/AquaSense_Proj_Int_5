@@ -3,25 +3,37 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #b6b6b6;
+    /* Adicione um margin-bottom para evitar sobreposições com o rodapé */
+    margin-bottom: 80px; /* Ajuste conforme necessário */
 }
 
 /* Estilos para cabeçalho */
 header {
     background-color: #4CAF50;
     color: white;
-    padding: 15px;
+    padding: 10px;
     text-align: center;
 }
 
-/* Estilos para rodapé */
-footer {
-    background-color: #333;
-    color: white;
-    padding: 10px;
-    text-align: center;
+/* Estilos para o rodapé */
+.footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+    height: 50px;
+    text-align: center;
+    background-color: #343a40;
+    color: #fff;
+    padding-top: 15px;
+}
+
+/* Estilos para o container */
+.container {
+    width: 60%; /* Define a largura como 60% da tela */
+    margin: 0 auto; /* Centraliza o container */
+    padding: 0 20%; /* Define margens laterais de 20% */
+    text-align: center;
 }
 
 /* Estilos para a seção de dados */
@@ -34,4 +46,39 @@ footer {
     background-color: #f0f0f0;
     padding: 10px;
     border-radius: 5px;
+}
+
+/* Estilo para o container das tabelas de tanques */
+#tabelas-tanques {
+    margin: 20px;
+}
+
+/* Estilo para as tabelas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #007BFF;
+    color: white;
+}
+
+td {
+    background-color: #fff;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
 }

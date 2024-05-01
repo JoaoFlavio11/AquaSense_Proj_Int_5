@@ -38,9 +38,9 @@ app.get('/dados', async (req, res) => {
     }
 });
 
-// Redirecione a rota raiz para a rota '/dados'
+// Servir o frontend na rota raiz (`/`)
 app.get('/', (req, res) => {
-    res.redirect('/dados');
+    res.sendFile(path.join(frontendPath, 'html', 'index.html'));
 });
 
 //teste
@@ -61,10 +61,10 @@ async function inserirDados() {
     // Insere um novo documento na coleção "tanque"
     await docRef.set({
         timestamp: dataFormatada,
-        nome: "Tanque04",
-        nivelAgua: 9,
-        temperatura: 20.3,
-        funcionando: false,
+        nome: "Tanque15",
+        nivelAgua: 50,
+        temperatura: 30.3,
+        funcionando: true,
     });
 
     console.log('Dados inseridos com sucesso!');
