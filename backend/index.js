@@ -43,6 +43,12 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(frontendPath, 'html', 'index.html'));
 });
 
+// Rota para gerenciamento de tanques
+app.get('/tanques', (req, res) => {
+    res.sendFile(path.join(frontendPath, 'html', 'tanques.html'));
+});
+
+
 //teste
 async function inserirDados() {
     const docRef = db.collection('tanque').doc();
