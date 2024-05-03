@@ -81,50 +81,6 @@ inserirDados();
 
 
 
-// Função para atualizar o menu do usuário
-function atualizarMenuUsuario() {
-    const userInfo = document.getElementById('user-info');
-
-    // Verifica se há um usuário autenticado
-    firebase.auth().onAuthStateChanged(user => {
-        if (user) {
-            // Usuário autenticado
-            const userName = user.displayName || 'Usuário';
-            const userPhoto = user.photoURL || 'path/to/default/photo.jpg'; // Caminho da foto padrão
-
-            userInfo.innerHTML = `
-                <img src="${userPhoto}" alt="Foto de ${userName}" class="user-photo">
-                <span>${userName}</span>
-                <button id="logout" class="btn btn-light">Sair</button>
-            `;
-
-            // Adiciona evento de clique para o botão de logout
-            document.getElementById('logout').addEventListener('click', handleLogout);
-        } else {
-            // Usuário não autenticado
-            userInfo.innerHTML = '';
-        }
-    });
-}
-
-// Função para lidar com o logout
-async function handleLogout() {
-    try {
-        await firebase.auth().signOut();
-        console.log('Usuário deslogado');
-        // Redireciona para a página de login
-        window.location.href = 'login.html';
-    } catch (error) {
-        console.error('Erro ao deslogar:', error);
-    }
-}
-
-// Chama a função para atualizar o menu do usuário ao carregar a página
-window.onload = atualizarMenuUsuario;
-
-
-
-
 
 // Inicie o servidor na porta 3000
 const PORT = process.env.PORT || 3000;

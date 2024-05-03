@@ -26,11 +26,10 @@ header {
 }
 
 /* Estilos para o container */
-.container {
+.container-box {
     width: 60%; /* Define a largura como 60% da tela */
     margin: 0 auto; /* Centraliza o container */
     padding: 0 20%; /* Define margens laterais de 20% */
-    text-align: center;
 }
 
 /* Estilos para a seção de dados */
