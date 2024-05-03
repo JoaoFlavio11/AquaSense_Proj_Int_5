@@ -1,19 +1,16 @@
-/* Estilos globais */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #b6b6b6;
-    /* Adicione um margin-bottom para evitar sobreposições com o rodapé */
-    margin-bottom: 80px; /* Ajuste conforme necessário */
+    margin-bottom: 80px;
 }
 
-/* Estilos para cabeçalho */
 header {
     background-color: #4CAF50;
     color: white;
-    padding: 10px;
     text-align: center;
+    padding: 10px;
 }
 
 /* Estilos para o rodapé */
@@ -83,15 +80,58 @@ tr:hover {
     background-color: #f1f1f1;
 }
 
-#tanquesChart{
-    width: 300px;
-    height: 300px;
+.content{
+    background-color: #343a40;
 }
-.tanques{
-    border-radius: 20px;
-    background-color: #fff;
-    width: 350px;
-    height: 350px;
-    padding: 9px;
+.row1{
+    flex-direction: row;
+}
+
+.navbar{
+    background-color: #343a40;
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
     margin: auto;
+    padding: 0.1rem;
+    width: calc(100% + 1rem);
+}
+
+.nav-link{
+    background-color: #b6b6b6;
+    color: #343a40;
+    text-decoration: none;
+    padding: 0.7rem;
+    border-radius: 0.6rem;
+    margin-left: 0.8rem;
+}
+
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #777777;
+    border-radius: 20px;
+    margin-top: 4rem;
+    padding: 0.1em;
+    
+}
+
+.dash01{
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 3rem;
+    width: 18em;
+    height: 18em;
+    text-align: center;
+}
+
+.dash02{
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 10px;
+    width: 35rem;
+    height: 18rem;
 }
