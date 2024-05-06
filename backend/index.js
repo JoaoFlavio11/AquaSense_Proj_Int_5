@@ -48,6 +48,11 @@ app.get('/tanques', (req, res) => {
     res.sendFile(path.join(frontendPath, 'html', 'tanques.html'));
 });
 
+//rota teste BI
+app.get('/teste', (req, res) => {
+    res.sendFile(path.join(frontendPath, 'html', 'teste.html'));
+});
+
 
 //teste
 async function inserirDados() {

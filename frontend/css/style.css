@@ -87,25 +87,30 @@ tr:hover {
     flex-direction: row;
 }
 
-.navbar{
-    background-color: #343a40;
-    height: 3.5rem;
-    display: flex;
-    align-items: center;
-    margin: auto;
-    padding: 0.1rem;
-    width: calc(100% + 1rem);
+/* Estilos para a navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0; /* Ocupa toda a largura da página */
+    background-color: #004085; /* Cor de fundo da navbar */
+    padding: 10px 20px; /* Padding interno */
+    z-index: 1000; /* Coloca a navbar acima de outros elementos */
+    display: flex; /* Layout flexível para alinhar itens lado a lado */
+    align-items: center; /* Centraliza os itens verticalmente */
 }
 
-.nav-link{
-    background-color: #b6b6b6;
-    color: #343a40;
-    text-decoration: none;
-    padding: 0.7rem;
-    border-radius: 0.6rem;
-    margin-left: 0.8rem;
+/* Estilos para os itens na navbar */
+.navbar .nav-link {
+    color: white; /* Cor do texto branco */
+    margin-right: 10px; /* Espaçamento entre os itens */
+    border-radius: 8px;
 }
 
+.navbar .nav-link:hover {
+    background-color: #3b3b3b; /* Cor de fundo ao passar o mouse */
+    border-radius: 8px;
+}
 
 .container{
     display: flex;

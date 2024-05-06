@@ -1,0 +1,127 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Estilos para a sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    background-color: #004085;
+    color: white;
+    transition: width 0.3s; /* Transição suave da largura */
+    overflow-x: hidden; /* Ocultar o conteúdo horizontal ao fechar */
+    padding-top: 20px;
+}
+
+/* Largura inicial da sidebar */
+.sidebar.open {
+    width: 200px;
+}
+
+/* Largura da sidebar ao fechar */
+.sidebar.closed {
+    width: 70px;
+}
+
+/* Ocultar texto e mostrar apenas ícones ao fechar a sidebar */
+.sidebar.closed .nav-link span {
+    display: none;
+}
+
+/* Estilos para os links (nav-links) dentro da sidebar */
+.sidebar .nav-link {
+    color: white; /* Define a cor do texto para branco */
+}
+
+/* Estilo para ícones nos links dentro da sidebar */
+.sidebar .nav-link i {
+    color:#ffffff; /* Define a cor dos ícones para branco */
+}
+
+/* Estilos para os links (nav-links) dentro da sidebar */
+.sidebar .nav-link:hover {
+    color: #fff;
+    background-color:#3b3b3b;
+}
+
+
+/* Estilos para o botão de abrir/fechar a sidebar */
+#toggleMenu {
+    position: absolute;
+    top: 10px; /* Posiciona o botão próximo ao topo da sidebar */
+    left: 50%; /* Centraliza o botão horizontalmente na sidebar */
+    transform: translateX(-50%); /* Centraliza o botão exatamente no centro */
+    background-color: transparent; /* Fundo transparente */
+    border: none; /* Sem borda */
+    color: white; /* Cor do ícone branca */
+    cursor: pointer; /* Cursor de ponteiro */
+    z-index: 1000; /* Garante que o botão fique acima dos ícones */
+}
+
+/* Ocultar o texto do botão quando a sidebar está fechada */
+.sidebar.closed #toggleMenu span {
+    display: none;
+}
+
+/* Estilo para o botão quando hover */
+#toggleMenu:hover {
+    background-color: rgba(0, 0, 0, 0.1); /* Cor de fundo escura ao hover */
+}
+
+/* Estilos para o conteúdo principal */
+.content {
+    transition: margin-left 0.3s; /* Transição suave para a margem esquerda */
+}
+
+.content {
+    margin: 14em;
+    padding: 20px; /* Define um espaçamento interno de 20px dentro do conteúdo */
+    box-sizing: border-box; /* Inclui o padding na largura e altura totais */
+}
+
+
+
+/* Estilos para o dashboard */
+.dashboard {
+    width: 100%; /* Ajusta a largura com base na margem do lado */
+    height: 100%; /* Calcula a altura com base na altura da tela */
+    margin: 20px auto; /* Centraliza o dashboard na tela */
+    padding: 10px; /* Espaçamento interno */
+    background-color: #3b3b3b; /* Cor de fundo neutra */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para o efeito de profundidade */
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+/* Estilo para as linhas no dashboard */
+.dashboard .row {
+    display: flex;
+    justify-content: space-between; /* Espaçamento igual entre as divs */
+    flex-wrap: wrap; /* Permite que as divs se ajustem em várias linhas conforme necessário */
+    gap: 15px; /* Espaçamento entre divs */
+    margin-bottom: 20px; /* Espaçamento entre linhas */
+    padding: 1rem; /* Espaçamento interno nas linhas */
+}
+
+/* Estilo para as divs dentro das linhas */
+.dashboard .row .chart-container {
+    flex: 1; /* Permite que as divs ocupem espaço flexível */
+    min-width: 100px; /* Largura mínima para divs */
+    padding: 10px;
+    border-radius: 10px; /* Bordas arredondadas */
+    background-color: white; /* Cor de fundo branco */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidade */
+}
+
+
+/* Paleta de cores */
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+}
+
+

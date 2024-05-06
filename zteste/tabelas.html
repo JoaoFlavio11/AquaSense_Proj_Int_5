@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas de registro</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <!-- Incluindo Chart.js -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-TX8cAwYQNj8rtGH8eRlVBpzUqXzqBQuzVj5ze4l6oHjlcwXxH8knI7eLbmJfCsh" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    
+    <div class="container">
+        <!-- aside section start-->
+        <aside>
+            <!-- start top-->
+                <div class="top">
+                    <div class="logo">
+                        <h2>Aqua<span class="aquas">Sense</span></h2>
+                    </div>
+                    <div class="end" id="end">
+                        <span class="material-symbols-outlined">close</span>
+                    </div>
+                </div>
+            <!-- end top-->
+
+            <!--Sidebar-->
+            <div class="sidebar">
+                <a href="" class="active">
+                    <span class="material-symbols-outlined">grid_view</span>
+                    <h3>Painel</h3>
+                </a>
+
+                <a href="">
+                    <span class="material-symbols-outlined">view_timeline</span>
+                    <h3>Tabelas</h3>
+                </a>
+
+                <a href="">
+                    <span class="material-symbols-outlined">settings</span>
+                    <h3>Configurações</h3>
+                </a>
+
+                <a href="">
+                    <span class="material-symbols-outlined">logout</span>
+                    <h3>Sair</h3>
+                </a>
+            </div>
+            <!--Sidebar end-->
+
+        </aside>
+    <!-- fim aside -->
+
+    <!--INICIO main-->
+        <main>
+
+            <!--Inicio ContainerTabelas-->
+            <div class="container-tables">
+                <div id="tabelas-tanques">
+                    <!-- As tabelas de tanques serão inseridas aqui pelo JavaScript -->
+                </div>
+            </div>
+            <!--fim ContainerTabelas-->
+
+
+        </main>
+    <!--FIM main-->
+    
+    <!--rigth start-->
+        <div class="right">
+            <!--Inicio TOP-->
+                <div class="top">
+                    <button class="menu_bar" id="menu_bar">
+                        <span class="material-symbols-outlined">menu</span>
+                    </button>
+
+                    <div class="cor-tema">
+                        <span class="material-symbols-outlined active">light_mode</span>
+                        <span class="material-symbols-outlined">dark_mode</span>
+                    </div>
+
+                    <div class="perfil">
+                        <div class="info">
+                            <p><b>João Flávio</b></p>
+                            <p>Admin</p>
+                            <small class="text-muted"></small>
+                        </div>
+                        <div class="foto-perfil">
+                            <img src="" alt="" >
+                        </div>
+                    </div>
+                </div>
+            <!--Fim TOP-->
+            
+            <!--Inicio atualizações recentes-->
+                <div class="atualizacoes-recentes">
+                    <h2>Atualizações</h2>
+                    <div class="atualizacoes">
+                        <div class="atualizacao">
+                            <div class="foto-perfil">
+                                <img src="./assets/imgs/tanque.png" alt="tanque" >
+                            </div>
+                            <div class="mensagem">
+                                <p><b>Tanque 1</b></p>
+                                <p>Ativo novamente!</p>
+                            </div>
+                        </div>
+
+                        <div class="atualizacao">
+                            <div class="foto-perfil">
+                                <img src="./assets/imgs/tanque.png" alt="tanque" >
+                            </div>
+                            <div class="mensagem">
+                                <p><b>Tanque 2</b></p>
+                                <p>Temperatura ideal!</p>
+                            </div>
+                        </div>
+
+                        <div class="atualizacao">
+                            <div class="foto-perfil">
+                                <img src="./assets/imgs/tanque.png" alt="tanque" >
+                            </div>
+                            <div class="mensagem">
+                                <p><b>Tanque 4</b></p>
+                                <p>Monitorar pH.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <!--FIM atualizações recentes-->
+            
+            <!-- INICIO analytics-->
+                <div class="analytics">
+                    <h2>Estatísticas</h2>
+                    <div class="itemA">
+                        <div class="icon">
+                            <span class="material-symbols-outlined">shopping_cart</span>
+                        </div>
+                        <div class="right_text">
+                            <div class="info">
+                                <h3>Pedidos ####</h3>
+                                <small class="text-muted">2h atrás</small>
+                            </div>
+                            <h5 class="aquas">-17%</h5>
+                            <h3>3849</h3>
+                        </div>
+                    </div>
+
+                    <div class="itemA">
+                        <div class="icon">
+                            <span class="material-symbols-outlined">shopping_cart</span>
+                        </div>
+                        <div class="right_text">
+                            <div class="info">
+                                <h3>Pedidos ####</h3>
+                                <small class="text-muted"> 2h atrás</small>
+                            </div>
+                            <h5 class="aquas">-17%</h5>
+                            <h3>3849</h3>
+                        </div>
+                    </div>
+
+                    <div class="itemA">
+                        <div class="icon">
+                            <span class="material-symbols-outlined">shopping_cart</span>
+                        </div>
+                        <div class="right_text">
+                            <div class="info">
+                                <h3>Pedidos ####</h3>
+                                <small class="text-muted">2h atrás</small>
+                            </div>
+                            <h5 class="aquas">-17%</h5>
+                            <h3>3849</h3>
+                        </div>
+                    </div>
+                </div>
+            <!-- FIM analytics-->
+        </div>
+    <!--rigth end-->
+
+
+    </div>
+
+    <!-- Importando os scripts do Bootstrap do CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-TJkgD8h0um9CKW1k21ng5yJ2LQ3CZ6ft9kMffq69ZKHB3c+ft3K2l19QXnYN5e" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fkIhblF4odkK/xkO2aYBicNVZcnnnW3SBt6UP1v/jGO1W3E" crossorigin="anonymous"></script>
+
+    <script src="./script.js"></script>
+    <script src="../frontend/js/sriptTabelas.js"></script>
+    
+</body>
+</html>

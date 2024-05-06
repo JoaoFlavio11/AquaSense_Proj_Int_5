@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+
+    <link rel="stylesheet" href="../css/teste.css">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+    <!-- Menu hambúrguer lateral -->
+    <div class="sidebar open" id="sidebar">
+        <!-- Botão para abrir/fechar a sidebar -->
+        <button id="toggleMenu">
+            <i class="bi bi-chevron-left"></i> <!-- Ícone de seta para a esquerda -->
+            <span>Menu</span>
+        </button>
+
+        <ul class="nav flex-column mt-4">
+            <li class="nav-item">
+                <a href="#" class="nav-link active">
+                    <i class="bi bi-house-door"></i>
+                    <span>Início</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <i class="bi bi-graph-up"></i>
+                    <span>Gráficos</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <i class="bi bi-file-text"></i>
+                    <span>Relatórios</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+<!-- Conteúdo principal -->
+<div class="content">
+    <!-- Dashboard -->
+    <div class="dashboard">
+        <!-- Primeira linha -->
+        <div class="row">
+            <!-- Gráfico de pizza -->
+            <div class="col-lg-6 col-md-12 chart-container" id="chart-pie">
+                <canvas id="tanquesChart"></canvas>
+            </div>
+            <!-- Gráfico de barras -->
+            <div class="col-lg-6 col-md-12 chart-container" id="chart-bar">
+                <canvas id="temperaturaChart"></canvas>
+            </div>
+        </div>
+        <!-- Segunda linha -->
+        <div class="row">
+            <!-- Divs sem conteúdo definido ainda -->
+            <div class="col-lg-4 col-md-6 col-sm-12 chart-container">
+                <!-- Div 1 -->
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 chart-container">
+                <!-- Div 2 -->
+            </div>
+            <div class="col-lg-4 col-sm-12 chart-container">
+                <!-- Div 3 -->
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    
+
+    
+    <!-- Incluindo o script JavaScript -->
+    <script src="../js/tanques.js"></script>
+    <script src="../js/elements.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
