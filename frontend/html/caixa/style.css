@@ -1,0 +1,142 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #b6b6b6;
+    margin-bottom: 80px;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Estilos para o rodapé */
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    background-color: #343a40;
+    color: #fff;
+    padding-top: 15px;
+}
+
+/* Estilos para o container */
+.container {
+    width: 60%; /* Define a largura como 60% da tela */
+    margin: 0 auto; /* Centraliza o container */
+    padding: 0 20%; /* Define margens laterais de 20% */
+    text-align: center;
+}
+
+/* Estilos para a seção de dados */
+#data-container {
+    padding: 20px;
+}
+
+/* Estilos para os dados do tanque */
+#dados-tanque {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Estilo para o container das tabelas de tanques */
+#tabelas-tanques {
+    margin: 20px;
+}
+
+/* Estilo para as tabelas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #007BFF;
+    color: white;
+}
+
+td {
+    background-color: #fff;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+.content{
+    background-color: #343a40;
+}
+.row1{
+    flex-direction: row;
+}
+
+/* Estilos para a navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0; /* Ocupa toda a largura da página */
+    background-color: #004085; /* Cor de fundo da navbar */
+    padding: 10px 20px; /* Padding interno */
+    z-index: 1000; /* Coloca a navbar acima de outros elementos */
+    display: flex; /* Layout flexível para alinhar itens lado a lado */
+    align-items: center; /* Centraliza os itens verticalmente */
+}
+
+/* Estilos para os itens na navbar */
+.navbar .nav-link {
+    color: white; /* Cor do texto branco */
+    margin-right: 10px; /* Espaçamento entre os itens */
+    border-radius: 8px;
+}
+
+.navbar .nav-link:hover {
+    background-color: #3b3b3b; /* Cor de fundo ao passar o mouse */
+    border-radius: 8px;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #777777;
+    border-radius: 20px;
+    margin-top: 4rem;
+    padding: 0.1em;
+    
+}
+
+.dash01{
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 3rem;
+    width: 18em;
+    height: 18em;
+    text-align: center;
+}
+
+.dash02{
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 10px;
+    width: 35rem;
+    height: 18rem;
+}

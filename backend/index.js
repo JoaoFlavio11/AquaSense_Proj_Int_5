@@ -53,6 +53,10 @@ app.get('/teste', (req, res) => {
     res.sendFile(path.join(frontendPath, 'html', 'teste.html'));
 });
 
+//rota tabelas
+app.get('/tabelas', (req, res) => {
+    res.sendFile(path.join(frontendPath, 'html', 'tabelas.html'));
+});
 
 //teste
 async function inserirDados() {
@@ -72,7 +76,7 @@ async function inserirDados() {
     // Insere um novo documento na coleção "tanque"
     await docRef.set({
         timestamp: dataFormatada,
-        nome: "Tanque10",
+        nome: "Tanque11",
         nivelAgua: 50,
         temperatura: 30.3,
         funcionando: true,
@@ -88,4 +92,6 @@ inserirDados();
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`Servidor rodando na porta ${PORT}`);
+    console.log(`http://localhost:${PORT}/`);
+    
 });
