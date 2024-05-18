@@ -1,28 +1,72 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
-    <title>Login</title>
-    <link rel="stylesheet" href="../css/login.css">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <link rel="stylesheet" href="../css/forms.css">
+    <title>Login - Aquasense</title>
 </head>
-
 <body>
-    <div id="login-container">
-        <h2>Login</h2>
-        <form id="login-form">
-            <input type="email" id="email" placeholder="Email" required>
-            <input type="password" id="password" placeholder="Senha" required>
-            <button type="submit">Entrar</button>
-        </form>
-        <button id="register-btn">Registrar-se</button>
+    <div class="container">
+        <form action="">
+            <div class="top">
+                <h1>Aqua<span class="aquas">Sense</span></h1>
+            </div>
+            <div class="form-field">
+                <div>
+                    <label for="">E-mail:</label>
+                </div>
+                <input type="email" name="email" onchange="onChangeEmail()"  id="email" placeholder="Digite aqui">
 
-        <div id="message"></div>
+                <div class="error" id="email-required-error">Este campo é obrigatório.</div>
+                <div class="error" id="email-invalid-error">E-mail inválido!</div>
+            </div>
+
+            <div class="form-field">
+                <div>
+                    <label for="">Senha:</label>
+                </div>
+                <input type="password" name="password" onchange="onChangePassword()" id="password" placeholder="Digite aqui">
+
+                <div class="error" id="password-required-error">Este campo é obrigatório.</div>
+            </div>
+
+            <div>
+                <button type="button" class="clear" id="recover-password-btn"  disabled="true" onclick="" > <b>Esqueceu a senha ?</b> </button>
+            </div>
+
+            <div>
+                <button type="button" class="solid" id="login-btn" disabled> <b>Entrar</b> </button>
+            </div>
+
+            <div>
+                <button type="button" class="outline" id="register-btn"> <b>Registre-se</b> </button>
+            </div>
+
+        </form>
     </div>
 
-    <script src="../js/login.js"></script>
+    <script src="../js/login.js" ></script>
+    <script src="../js/baseWeb.js"></script>
+
+    <!-- Firebase scripts -->
+    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";></script>
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyCnhzvhJTgxM_oIH2I9VrirpJ3ZyYxsFYY",
+            authDomain: "monitoramento-de-tanque-347a4.firebaseapp.com",
+            projectId: "monitoramento-de-tanque-347a4",
+            storageBucket: "monitoramento-de-tanque-347a4.appspot.com",
+            messagingSenderId: "650661883198",
+            appId: "1:650661883198:web:ea8d03d77f8c0bf2e2506f"
+        };
+
+        firebase.initializeApp(firebaseConfig);
+
+        
+    </script>
+    
 </body>
-
 </html>
-
-

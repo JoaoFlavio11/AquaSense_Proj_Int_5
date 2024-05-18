@@ -19,7 +19,7 @@ const db = admin.firestore();
 const frontendPath = path.join(__dirname, '../frontend');
 app.use(express.static(frontendPath));
 
-// Rota para obter dados do tanque de água
+// Rota para obter todos os dados do tanque de água
 app.get('/dados', async (req, res) => {
     try {
         const dadosSnapshot = await db.collection('tanque').get();
@@ -38,20 +38,64 @@ app.get('/dados', async (req, res) => {
     }
 });
 
-// Servir o frontend na rota raiz (`/`)
+// Rota para obter dados do tanque de água filtrados por data
+app.get('/dadosFiltrados', async (req, res) => {
+    try {
+        const { startDate, endDate } = req.query;
+        // Aqui você deve implementar a lógica para buscar dados filtrados por data no seu banco de dados
+        // Por exemplo, consulte o banco de dados usando startDate e endDate
+        // e retorne os dados filtrados como JSON
+        const dadosSnapshot = await db.collection('tanque')
+            .where('timestamp', '>=', startDate)
+            .where('timestamp', '<=', endDate)
+            .get();
+        
+        const dados = [];
+
+        // Percorra os documentos na coleção e crie uma lista de dados filtrados
+        dadosSnapshot.forEach(doc => {
+            dados.push({ id: doc.id, ...doc.data() });
+        });
+
+        // Envie os dados filtrados como resposta em formato JSON
+        res.json(dados);
+    } catch (error) {
+        // Em caso de erro, retorne um código de status 500 com uma mensagem de erro
+        res.status(500).json({ erro: 'Erro ao buscar dados filtrados' });
+    }
+});
+
+
+
+// Servir o frontend na rota raiz (`/`) => trocar para login.html
 app.get('/', (req, res) => {
+    res.sendFile(path.join(frontendPath, 'html', 'login.html'));
+});
+
+//rota para a página de registro
+app.get('/registro', (req, res) => {
+    res.sendFile(path.join(frontendPath, 'html', 'registro.html'));
+});
+
+//rota para recuperar senha
+app.get('/recuperarSenha', (req, res) => {
+    res.sendFile(path.join(frontendPath, 'html', 'recuperarSenha.html')); 
+});
+
+//rota para a página principal
+app.get('/paginaInicial', (req, res) => {
     res.sendFile(path.join(frontendPath, 'html', 'index.html'));
 });
 
-// Rota para gerenciamento de tanques
-app.get('/tanques', (req, res) => {
-    res.sendFile(path.join(frontendPath, 'html', 'tanques.html'));
+//rota gráficos de temperatura
+app.get('/temperatura', (req, res) => {
+    res.sendFile(path.join(frontendPath, 'html', 'temperatura.html'));
 });
 
-//rota teste BI
-app.get('/teste', (req, res) => {
-    res.sendFile(path.join(frontendPath, 'html', 'teste.html'));
-});
+//criar outras rotas
+
+
+
 
 
 //teste
@@ -63,19 +107,17 @@ async function inserirDados() {
     const dataFormatada = dataAtual.toLocaleString('pt-BR', {
         day: '2-digit',
         month: '2-digit',
-        year: 'numeric',
         hour: '2-digit',
-        minute: '2-digit',
-        second: '2-digit'
+        minute: '2-digit'
     });
 
     // Insere um novo documento na coleção "tanque"
     await docRef.set({
         timestamp: dataFormatada,
-        nome: "Tanque10",
+        nome: "Tanque12",
         nivelAgua: 50,
-        temperatura: 30.3,
-        funcionando: true,
+        temperatura: 10.3,
+        funcionando: false,
     });
 
     console.log('Dados inseridos com sucesso!');

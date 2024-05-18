@@ -1,66 +1,247 @@
-*{
-    margin: 0;
-    padding: 0;
+@import './root.css';
+
+body {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    width: 100vh;
+    height: 100vh;
+    font-size: 0.88rem;
+    overflow: hidden;
+    user-select: none;
+    background: var(--cor-background);
+    margin-right: 2%;
+}
+
+.aquas {
+    color: var(--cor-aquas);
+}
+
+h1, a, h2, h3, h4, h5, p, b{
+    color: var(--cor-texto); /* Usa a variável de cor do texto */
+}
+
+aside {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20%;
+    margin-left: 1rem;
+}
+
+aside .top {
+    background-color: var(--cor-branco);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 1.4rem;
+    border-radius: var(--border-radius-3);
+    margin-bottom: 1rem;
+}
+
+
+aside .sidebar {
+    background-color: var(--cor-branco);
+    display: flex;
+    flex-direction: column;
+    height: 85vh;
+    top: 1rem;
+    border-radius: var(--border-radius-3);
+}
+
+
+
+aside h3 {
+    font-weight: 400;
+    font-size: 0.87rem;
+}
+
+aside .sidebar a {
+    display: flex;
+    color: var(--cor-info-escuro);
+    margin-left: 1.5rem;
+    gap: 1rem;
+    align-items: center;
+    height: 3.2rem;
+    transition: all .1s ease-in;
+    border-radius: var(--border-radius-1);
+    text-decoration: none;
+    margin-top: 1rem;
+}
+
+aside .sidebar a span {
+    font-size: 1.6rem;
+    transition: all .1s ease-in;
+}
+
+aside .sidebar a:last-child {
+    position: absolute;
+    bottom: 1rem;
+    width: 100%;
+}
+
+
+aside .sidebar a:hover {
+    color: var(--cor-aquas);
+}
+
+aside .sidebar a:hover span {
+    margin-left: 1rem;
+    transition: .4s ease;
+}
+
+
+
+/* Estilos para os títulos dos tanques */
+h1, h2 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #fff;
+}
+
+h2, h4{
+    color: #000;
+}
+
+h4{
+    font-size: large;
+}
+
+
+
+.container-tables{
+    position: absolute;
+    top: 0;
+    left: 20%; /* Define a largura da sidebar */
+    width: 80%; /* Calcula a largura restante */
+    margin: 0 auto; 
+}
+
+#tabelas-tanques {
+    background-color: var(--cor-branco);
+    border-radius: 20px;
+    margin: 3rem;
+    padding-top: 20px;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap; /* Alterado para permitir a quebra de linha */
+    gap: 1rem;
+}
+
+.tanque {
+    background-color: var(--cor-escuro);
+    width: 45%; /* Alterado para ocupar 30% da largura do container pai */
+    height: 15rem;
+    overflow-x: auto;
+    overflow-y: auto;
+    margin: 10px; /* Adicionado para espaçar as tabelas verticalmente */
+    padding: 15px;
+    border-radius: var(--border-radius-cartao);
+    
+}
+
+/* Estilos para tabelas e cabeçalhos */
+
+table {
+    width: 96%;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+}
+
+th, td {
+    padding: 8px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+
+th {
+    color: #fff;
+    background-color: #004daa;
+}
+
+/* Atualizações Recentes */
+
+.foto-tanq img {
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.atualizacoes-recentes {
+    background-color: var(--cor-branco);
+    border-radius: 20px;
+    margin: 3rem;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.atualizacoes {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 1rem;
+}
+
+.atualizacao {
+    width:30%; 
+    background-color: var(--cor-aqua-escuro);
+    padding: var(--padding-cartao);
+    border-radius: var(--border-radius-cartao);
+    transition: all .3s ease;
+    margin-right: 1rem; /* Adiciona margem à direita para separar as divs */
+}
+
+.atualizacoes-recentes .foto-tanq {
+    flex: 0 0 40px; /* Define a largura fixa para a imagem */
+}
+
+.atualizacoes-recentes .mensagem {
+    flex: 1; /* Permite que o texto ocupe o restante do espaço disponível */
+}
+
+.atualizacoes-recentes .mensagem p {
+    margin: 0; /* Remove a margem padrão dos parágrafos */
+}
+
+/* GRÁFICOS HTML*/
+.graficos-tanques{
+    background-color: var(--cor-branco);
+    border-radius: var(--border-radius-cartao);
+    margin: 3rem;
+    padding-top: 20px;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.tanque-chart {
+    width: 49%;
+}
+
+#temperaturaChartTanque10,
+#temperaturaChartTanque15,
+#temperaturaChartTanque11,
+#temperaturaChartTanque12 {
+    background-color: #fff;
+    border-radius: var(--border-radius-cartao);
+    padding: 10px;
+    height: 22rem;
+    margin: 1rem;
     box-sizing: border-box;
 }
 
-body {
-    height: 100vh;
-    background-color: #b6b6b6;
-    margin-bottom: 80px;
-}
 
-header {
-    text-align: center;
-}
+@media screen and (max-width: 1200px){
+    
+    /*body{
+        overflow-x: auto;
+    }*/
 
-nav.menu-lateral{
-    width: 12rem;
-    height: 100%;    
-    background-color: #004085; /* Cor de fundo da navbar */
-    padding: 40px 0px 40px 1%; /* Padding interno */
-
-}
-
-.btn-expandir{
-    width: 100%;
-    padding-left:10px;
-}
-
-.btn-expandir > i{
-    color: #fff;
-    font-size: 24px;
-    cursor: pointer;
-}
-
-.nav-link {
-    display: flex; /* Permite que ícones e textos dentro de nav-link sejam flexíveis */
-    align-items: center; /* Alinha ícones e texto verticalmente */
-    text-decoration: none; /* Remove o sublinhado do link */
-    color: inherit; /* Herda a cor do texto pai */
-    padding: 8px 10px; /* Espaçamento ao redor dos links */
-}
-
-
-.bi {
-    margin-right: 5px; /* Espaço entre o ícone e o texto */
-}
-
-
-.container {
-    width: 60%; /* Define a largura como 60% da tela */
-    margin: 0 auto; /* Centraliza o container */
-    padding: 0 20%; /* Define margens laterais de 20% */
-    text-align: center;
-}
-
-.footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    height: 50px;
-    text-align: center;
-    background-color: #343a40;
-    color: #fff;
-    padding-top: 15px;
+    .tanque {
+        width: 85%;
+    }
 }

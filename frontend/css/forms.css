@@ -1,0 +1,116 @@
+@import './root.css';
+
+body {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    background: var(--cor-background);
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.top{
+    background-color: var(--cor-background);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: var(--border-radius-3);
+    margin-bottom: 2rem;
+}
+
+.aquas {
+    color: var(--cor-aquas);
+}
+
+form{
+    background-color: var(--cor-branco);
+    border-radius: var(--border-radius-cartao);
+    color: var(--cor-texto);
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 300px;
+    box-shadow: var(--box-shadow); /**/
+}
+
+input, button{
+    padding: 10px;
+    border-radius: var(--border-radius-1);
+    cursor: pointer;
+    width: 100%;
+    border: none;
+}
+
+button{
+    margin-bottom: 10px;
+}
+
+button:active{
+    opacity: 0.6;
+    transition: .3s;
+}
+
+button:disabled{
+    opacity: 0.5;
+}
+
+.form-field{
+    margin-bottom: 10px;
+}
+
+b{
+    font-size: larger;
+}
+
+
+.clear{
+    background-color: transparent;
+    border: 2px solid transparent;
+    color: var(--cor-texto);
+}
+
+.clear:hover{
+    color: var(--cor-aquas);
+    border: 2px solid var(--cor-aquas);
+    transition: .2s;
+}
+
+.solid{
+    color: var(--cor-texto);
+    background-color: var(--cor-aquas);
+    border: none;
+}
+
+.solid:hover{
+    background-color: var(--cor-aquas-dark);
+    transition: .2s;
+}
+
+.outline{
+    color: var(--cor-texto);
+    background-color: var(--cor-var-escura);
+    border: 2px solid transparent;
+}
+
+.outline:hover{
+    color: var(--cor-aquas);
+    background-color: transparent;
+    border: 2px solid var(--cor-aquas);
+    transition: .2s;
+}
+
+.error{
+    color: var(--cor-texto);
+    background-color: var(--cor-aviso);
+    border-radius: var(--border-radius-1);
+    text-align: center;
+    padding: 2px;
+    margin: 5px;
+    width: 100%;
+    
+    display: none;
+}

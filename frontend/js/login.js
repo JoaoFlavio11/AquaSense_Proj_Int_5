@@ -1,45 +1,64 @@
-import firebase from 'firebase/app';
-import 'firebase/auth';
-import db from '../firebase/monitoramento-de-tanque-347a4-firebase-adminsdk-6fubm-dcc62cd1bb.json'; // Importe o arquivo firebase.js que contém a configuração do Firebase
-
-// Inicialize o Firebase
-firebase.initializeApp({
-    // Adicione as configurações do seu projeto Firebase aqui
-    credential: admin.credential.cert(serviceAccount),
-    databaseURL: 'https://monitoramento-de-tanque.firebaseio.com'
-});
-
-const auth = firebase.auth();
-
-// Função para lidar com o login
-async function handleLogin(event) {
-    event.preventDefault();
-    const email = document.getElementById('email').value;
-    const senha = document.getElementById('password').value;
-
-    try {
-        await auth.signInWithEmailAndPassword(email, senha);
-        document.getElementById('message').textContent = 'Login realizado com sucesso!';
-        // Redirecionar para a página principal ou outra página após o login bem-sucedido
-    } catch (error) {
-        document.getElementById('message').textContent = 'Erro ao fazer login: ' + error.message;
-    }
+function onChangeEmail() {
+   toggleButtonsDisable();
+   toggleEmailErrors();
 }
 
-// Função para lidar com o registro
-async function handleRegister() {
-    const email = document.getElementById('email').value;
-    const senha = document.getElementById('password').value;
-
-    try {
-        await auth.createUserWithEmailAndPassword(email, senha);
-        document.getElementById('message').textContent = 'Registro realizado com sucesso!';
-        // Redirecionar para a página principal ou outra página após o registro bem-sucedido
-    } catch (error) {
-        document.getElementById('message').textContent = 'Erro ao registrar-se: ' + error.message;
-    }
+function onChangePassword(){
+    toggleButtonsDisable();
+    togglePasswordErrors();
 }
 
-// Adicionar ouvintes de evento para os botões de login e registro
-document.getElementById('login-form').addEventListener('submit', handleLogin);
-document.getElementById('register-btn').addEventListener('click', handleRegister);
+function isEmailValid(){
+    const email = form.email().value;
+    
+    if (!email){
+        return false;
+    }
+    
+    return validateEmail(email);
+}
+
+function isPasswordValid(){
+    const password = form.password().value;
+    
+    if (!password){
+        return false;
+    }
+
+    return true;
+
+}
+
+function toggleEmailErrors(){
+    const email = form.email().value;
+    form.emailRequiredError().style.display = email ? "none" : "block";
+
+    form.emailInvalidError().style.display = validateEmail(email) ? "none" : "block";
+    
+}
+
+function togglePasswordErrors(){
+    const password = form.password().value;
+    form.passwordRequiredError().style.display = password ? "none" : "block";
+
+}
+
+function toggleButtonsDisable(){
+    const emailValid = isEmailValid();
+    form.recoverPasswordBtn().disabled = !emailValid;
+
+    const PasswordValid = isPasswordValid();
+    form.loginBtn().disabled = !emailValid || !PasswordValid;
+}
+
+const form = {
+    email: () => document.getElementById('email'),
+    emailInvalidError: () => document.getElementById('email-invalid-error'),
+    emailRequiredError: () => document.getElementById('email-required-error'),
+    loginBtn: () => document.getElementById('login-btn'),
+
+    password: () => document.getElementById('password'),
+    passwordRequiredError: () => document.getElementById('password-required-error'),
+    recoverPasswordBtn: () => document.getElementById('recover-password-btn'),
+    
+}

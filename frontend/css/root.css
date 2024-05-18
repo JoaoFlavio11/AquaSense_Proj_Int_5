@@ -1,0 +1,25 @@
+:root{
+    --cor-aquas: #2700d4;
+    --cor-aquas-dark: #11005c;
+    --cor-aqua-escuro: #271285;
+    --cor-success: #41f1b6;
+    --cor-branco: #202528;
+    --cor-info-escuro: #7d8da1;
+    --cor-info-claro: #dce1eb;
+    --cor-escuro: #edeffd;
+    --cor-aviso: #c50000;
+    --cor-claro: rgba(0, 0, 0, 0.4);
+    --cor-var-primaria: #111e88;
+    --cor-var-escura: #677483;
+    --cor-texto: #edeffd;
+    --cor-background: #181a1e;
+
+    --border-radius-cartao: 2rem;
+    --border-radius-1: 0.4rem;
+    --border-radius-2: 0.8rem;
+    --border-radius-3: 1.2rem;
+
+    --padding-cartao: 1.8rem;
+    --padding-1: 1.2rem;
+    --box-shadow: 0 2rem 3rem var(--cor-claro);
+}

@@ -23,6 +23,16 @@ async function buscarDados() {
 
         // Exibir os dados para cada tanque em uma tabela separada
         Object.keys(tanques).forEach(nomeTanque => {
+            // Criar uma div para cada tabela de tanque
+            const divTanque = document.createElement('div');
+            divTanque.className = 'tanque';
+
+            // Criar um título para o tanque
+            const tituloTanque = document.createElement('h2');
+            tituloTanque.textContent = nomeTanque;
+            divTanque.appendChild(tituloTanque);
+
+            // Criar a tabela para o tanque
             const tabela = document.createElement('table');
             tabela.className = 'table';
 
@@ -68,14 +78,10 @@ async function buscarDados() {
             });
 
             tabela.appendChild(tbody);
+            divTanque.appendChild(tabela);
 
-            // Criar um título para o tanque
-            const tituloTanque = document.createElement('h3');
-            tituloTanque.textContent = nomeTanque;
-
-            // Adicionar o título e a tabela ao container
-            container.appendChild(tituloTanque);
-            container.appendChild(tabela);
+            // Adicionar a div do tanque ao container
+            container.appendChild(divTanque);
         });
     } catch (error) {
         console.error('Erro ao buscar dados:', error);
@@ -83,4 +89,4 @@ async function buscarDados() {
 }
 
 // Chama a função para buscar dados ao carregar a página
-window.onload = buscarDados;
+buscarDados();

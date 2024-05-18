@@ -105,7 +105,7 @@ a {
     color: var(--cor-texto); /* Usa a variável de cor do texto */
 }
 
-h1, h2, h3, h4, h5, p, b, small, table, td, .end, .cor-tema, .number{
+h1, a, h2, h3, h4, h5, p, b, small, table, td, .end, .cor-tema, .number{
     color: var(--cor-texto); /* Usa a variável de cor do texto */
 }
 
