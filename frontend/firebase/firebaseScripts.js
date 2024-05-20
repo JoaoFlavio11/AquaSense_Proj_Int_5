@@ -91,29 +91,7 @@ document.getElementById('recover-password-btn').onclick = function() {
 
 
 //criar conta 
-document.getElementById('register-btn').onclick = function() {
-    if (!this.disabled) {
-        const email = document.getElementById('email').value;
-        const password = document.getElementById('password').value;
-        const confirmPassword = document.getElementById('confirm-password').value;
-        
-        // Mostrar carregamento
-        document.getElementById('loading').style.display = 'flex';
-
-        createUserWithEmailAndPassword(auth, email, password)
-        .then((userCredential) => {
-            // Login bem-sucedido
-            window.location.href = 'http://localhost:3000/paginaInicial';
-        })
-        .catch((error) => {
-            // Tratar erros de login
-            console.error('Error code:', error.code);
-            console.error('Error message:', error.message);
-            alert(getErrorMessage(error));
-            document.getElementById('loading').style.display = 'none';
-        });
-    }
-};
+//criar amanha  
 
 
 
