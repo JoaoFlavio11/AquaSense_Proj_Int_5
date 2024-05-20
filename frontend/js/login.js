@@ -62,3 +62,8 @@ const form = {
     recoverPasswordBtn: () => document.getElementById('recover-password-btn'),
     
 }
+
+// função para validar email
+function validateEmail(email) {
+    return /\S+@\S+\.\S+/.test(email);
+}

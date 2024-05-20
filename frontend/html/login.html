@@ -2,38 +2,40 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=
-    , initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/forms.css">
-    <title>Login - Aquasense</title>
+    <title>Login - AquaSense</title>
 </head>
 <body>
     <div class="container">
+        <div class="loading" id="loading">
+            
+            <h3>Carregando &nbsp;</h3>
+            <div class="spinner"></div>
+        </div>
         <form action="">
             <div class="top">
                 <h1>Aqua<span class="aquas">Sense</span></h1>
             </div>
             <div class="form-field">
-                <div>
-                    <label for="">E-mail:</label>
+                <div class="label-email">
+                    <label for="email">E-mail:</label>
                 </div>
-                <input type="email" name="email" onchange="onChangeEmail()"  id="email" placeholder="Digite aqui">
-
+                <input type="email" name="email" onchange="onChangeEmail()" id="email" placeholder="Digite aqui">
                 <div class="error" id="email-required-error">Este campo é obrigatório.</div>
                 <div class="error" id="email-invalid-error">E-mail inválido!</div>
             </div>
 
             <div class="form-field">
                 <div>
-                    <label for="">Senha:</label>
+                    <label for="password">Senha:</label>
                 </div>
                 <input type="password" name="password" onchange="onChangePassword()" id="password" placeholder="Digite aqui">
-
                 <div class="error" id="password-required-error">Este campo é obrigatório.</div>
             </div>
 
-            <div>
-                <button type="button" class="clear" id="recover-password-btn"  disabled="true" onclick="" > <b>Esqueceu a senha ?</b> </button>
+            <div class="btn-box">
+                <button type="button" class="clear" id="recover-password-btn" disabled="true"> <b>Esqueceu a senha ?</b> </button>
             </div>
 
             <div>
@@ -41,32 +43,14 @@
             </div>
 
             <div>
-                <button type="button" class="outline" id="register-btn"> <b>Registre-se</b> </button>
+                <a href="http://localhost:3000/registro" target="_blank" rel="noopener noreferrer">
+                    <button type="button"  class="outline" id="register-btn"> <b>Registre-se</b> </button>
+                </a>
             </div>
-
         </form>
     </div>
 
-    <script src="../js/login.js" ></script>
-    <script src="../js/baseWeb.js"></script>
-
-    <!-- Firebase scripts -->
-    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";></script>
-    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";></script>
-    <script>
-        const firebaseConfig = {
-            apiKey: "AIzaSyCnhzvhJTgxM_oIH2I9VrirpJ3ZyYxsFYY",
-            authDomain: "monitoramento-de-tanque-347a4.firebaseapp.com",
-            projectId: "monitoramento-de-tanque-347a4",
-            storageBucket: "monitoramento-de-tanque-347a4.appspot.com",
-            messagingSenderId: "650661883198",
-            appId: "1:650661883198:web:ea8d03d77f8c0bf2e2506f"
-        };
-
-        firebase.initializeApp(firebaseConfig);
-
-        
-    </script>
-    
+    <script src="../js/login.js"></script>
+    <script src="../firebase/firebaseScripts.js" type="module"></script>
 </body>
 </html>

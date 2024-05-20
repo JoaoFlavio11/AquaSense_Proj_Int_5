@@ -3,6 +3,7 @@
 body {
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     background: var(--cor-background);
+    margin: 0;
 }
 
 .container{
@@ -12,13 +13,22 @@ body {
     height: 100vh;
 }
 
-.top{
+.top, .top2{
     background-color: var(--cor-background);
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
     align-items: center;
     border-radius: var(--border-radius-3);
-    margin-bottom: 2rem;
+    
+}
+
+.top2{
+    margin-top: 5px;
+}
+
+.label-email{
+    margin-top: 2rem;
 }
 
 .aquas {
@@ -43,6 +53,7 @@ input, button{
     cursor: pointer;
     width: 100%;
     border: none;
+    box-shadow: var(--box-shadow);
 }
 
 button{
@@ -66,16 +77,23 @@ b{
     font-size: larger;
 }
 
+.btn-box{
+    margin-top: 1rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
 
 .clear{
-    background-color: transparent;
+    background-color: var(--cor-branco);
     border: 2px solid transparent;
     color: var(--cor-texto);
 }
 
 .clear:hover{
-    color: var(--cor-aquas);
-    border: 2px solid var(--cor-aquas);
+    color: var(--cor-aquas-light);
+    background-color: var(--cor-branco2);
+    border: 2px solid var(--cor-aquas-light);
     transition: .2s;
 }
 
@@ -97,9 +115,9 @@ b{
 }
 
 .outline:hover{
-    color: var(--cor-aquas);
-    background-color: transparent;
-    border: 2px solid var(--cor-aquas);
+    color: var(--cor-texto);
+    background-color: var(--cor-aquas-dark);
+    border: 2px solid var(--cor-aquas-dark);
     transition: .2s;
 }
 
@@ -113,4 +131,38 @@ b{
     width: 100%;
     
     display: none;
+}
+
+.loading {
+    background: rgba(0,0,0,0.9);
+    border-radius: var(--border-radius-cartao);
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    position: fixed;
+    padding: 2px;
+    margin: 5px;
+    width: 15rem;
+    height: 5rem;
+}
+
+.loading h3 {
+    color: var(--cor-texto);
+    font-size: 1.5rem;
+}
+
+.spinner {
+    width: 2rem;
+    height: 2rem;
+    border: 4px solid rgba(0, 90, 173, 0.9);
+    border-left-color: var(--cor-texto);
+    margin: 5px;
+    border-radius: 50%;
+    animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
 }
