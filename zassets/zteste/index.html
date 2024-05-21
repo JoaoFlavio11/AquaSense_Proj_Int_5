@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Inicial</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- aside section start-->
+            <aside>
+                <!-- start top-->
+                    <div class="top">
+                        <div class="logo">
+                            <h2>Aqua<span class="aquas">Sense</span></h2>
+                        </div>
+                        <div class="end" id="end">
+                            <span class="material-symbols-outlined">close</span>
+                        </div>
+                    </div>
+                <!-- end top-->
+
+                <!--Sidebar-->
+                <div class="sidebar">
+                    <a href="" class="active">
+                        <span class="material-symbols-outlined">grid_view</span>
+                        <h3>Painel</h3>
+                    </a>
+
+                    <a href="">
+                        <span class="material-symbols-outlined">view_timeline</span>
+                        <h3>Tabelas</h3>
+                    </a>
+
+                    <a href="">
+                        <span class="material-symbols-outlined">settings</span>
+                        <h3>Configurações</h3>
+                    </a>
+
+                    <a href="">
+                        <span class="material-symbols-outlined">logout</span>
+                        <h3>Sair</h3>
+                    </a>
+                </div>
+                <!--Sidebar end-->
+
+            </aside>
+        <!-- fim aside -->
+        
+        <!--main start-->
+        <main>
+            <h1>Painel</h1>
+            
+            <div class="date">
+                <input type="date">
+            </div>
+
+            <div class="insights">
+                <!-- inicio vendas-->
+                    <div class="vendas">
+                        <span
+                        class="material-symbols-outlined">trending_up</span>
+                        <div class="middle">
+                            <div class="left">
+                                <h3>Vendas Totais</h3>
+                                <h1>$25,023</h1>
+                            </div>
+
+                            <div class="progress">
+                                <svg>
+                                    <circle r="30" cy="40" cx="40"></circle>
+                                </svg>
+                                <canvas></canvas>
+                                <div class="number">80%</div>
+
+                            </div>
+                        </div>
+                        <small>Últimas 24 horas</small>
+                    </div>
+                <!-- fim vendas-->
+
+                <!-- inicio despesas-->
+                    <div class="despesas">
+                        <span
+                        class="material-symbols-outlined">local_mall</span>
+                        <div class="middle">
+                            <div class="left">
+                                <h3>Despesas Totais</h3>
+                                <h1>$25,023</h1>
+                            </div>
+
+                            <div class="progress">
+                                <svg>
+                                    <circle r="30" cy="40" cx="40"></circle>
+                                </svg>
+                                <canvas></canvas>
+                                <div class="number">80%</div>
+
+                            </div>
+                        </div>
+                        <small>Últimas 24 horas</small>
+                    </div>
+                <!-- fim despesas-->
+
+                <!-- inicio renda-->
+                    <div class="renda">
+                        <span
+                        class="material-symbols-outlined">stacked_line_chart</span>
+                        <div class="middle">
+                            <div class="left">
+                                <h3>renda Total</h3>
+                                <h1>$25,023</h1>
+                            </div>
+
+                            <div class="progress">
+                                <svg>
+                                    <circle r="30" cy="40" cx="40"></circle>
+                                </svg>
+                                <canvas></canvas>
+                                <div class="number">80%</div>
+
+                            </div>
+                        </div>
+                        <small>Últimas 24 horas</small>
+                    </div>
+            <!-- fim renda-->
+            </div>
+            <!-- Fim insights-->
+
+            <!--iicio recent order-->
+                <div class="recent_order">
+                    <h1>Recent Order</h1>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Nome Prod.</th>
+                                <th>Num. Prod</th>
+                                <th>Pagamento</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>######</td>
+                                <td>352</td>
+                                <td>Pix</td>
+                                <td class="success">Pago</td>
+                                <td class="primary">Detalhes</td>
+                            </tr>
+                            <tr>
+                                <td>######</td>
+                                <td>352</td>
+                                <td>Pix</td>
+                                <td class="success">Pago</td>
+                                <td class="primary">Detalhes</td>
+                            </tr>
+                            <tr>
+                                <td>######</td>
+                                <td>352</td>
+                                <td>Pix</td>
+                                <td class="success">Pago</td>
+                                <td class="primary">Detalhes</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            <!--fim recent order-->
+
+
+        </main>
+        <!--main end-->
+
+        <!--rigth start-->
+            <div class="right">
+                <!--Inicio TOP-->
+                    <div class="top">
+                        <button class="menu_bar" id="menu_bar">
+                            <span class="material-symbols-outlined">menu</span>
+                        </button>
+
+                        <div class="cor-tema">
+                            <span class="material-symbols-outlined active">light_mode</span>
+                            <span class="material-symbols-outlined">dark_mode</span>
+                        </div>
+
+                        <div class="perfil">
+                            <div class="info">
+                                <p><b>João Flávio</b></p>
+                                <p>Admin</p>
+                                <small class="text-muted"></small>
+                            </div>
+                            <div class="foto-perfil">
+                                <img src="" alt="" >
+                            </div>
+                        </div>
+                    </div>
+                <!--Fim TOP-->
+                
+                <!--Inicio atualizações recentes-->
+                    <div class="atualizacoes-recentes">
+                        <h2>Atualizações</h2>
+                        <div class="atualizacoes">
+                            <div class="atualizacao">
+                                <div class="foto-perfil">
+                                    <img src="./assets/imgs/tanque.png" alt="tanque" >
+                                </div>
+                                <div class="mensagem">
+                                    <p><b>Tanque 1</b></p>
+                                    <p>Ativo novamente!</p>
+                                </div>
+                            </div>
+
+                            <div class="atualizacao">
+                                <div class="foto-perfil">
+                                    <img src="./assets/imgs/tanque.png" alt="tanque" >
+                                </div>
+                                <div class="mensagem">
+                                    <p><b>Tanque 2</b></p>
+                                    <p>Temperatura ideal!</p>
+                                </div>
+                            </div>
+
+                            <div class="atualizacao">
+                                <div class="foto-perfil">
+                                    <img src="./assets/imgs/tanque.png" alt="tanque" >
+                                </div>
+                                <div class="mensagem">
+                                    <p><b>Tanque 4</b></p>
+                                    <p>Monitorar pH.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <!--FIM atualizações recentes-->
+                
+                <!-- INICIO analytics-->
+                    <div class="analytics">
+                        <h2>Estatísticas</h2>
+                        <div class="itemA">
+                            <div class="icon">
+                                <span class="material-symbols-outlined">shopping_cart</span>
+                            </div>
+                            <div class="right_text">
+                                <div class="info">
+                                    <h3>Pedidos ####</h3>
+                                    <small class="text-muted">2h atrás</small>
+                                </div>
+                                <h5 class="aquas">-17%</h5>
+                                <h3>3849</h3>
+                            </div>
+                        </div>
+
+                        <div class="itemA">
+                            <div class="icon">
+                                <span class="material-symbols-outlined">shopping_cart</span>
+                            </div>
+                            <div class="right_text">
+                                <div class="info">
+                                    <h3>Pedidos ####</h3>
+                                    <small class="text-muted"> 2h atrás</small>
+                                </div>
+                                <h5 class="aquas">-17%</h5>
+                                <h3>3849</h3>
+                            </div>
+                        </div>
+
+                        <div class="itemA">
+                            <div class="icon">
+                                <span class="material-symbols-outlined">shopping_cart</span>
+                            </div>
+                            <div class="right_text">
+                                <div class="info">
+                                    <h3>Pedidos ####</h3>
+                                    <small class="text-muted">2h atrás</small>
+                                </div>
+                                <h5 class="aquas">-17%</h5>
+                                <h3>3849</h3>
+                            </div>
+                        </div>
+                    </div>
+                <!-- FIM analytics-->
+                
+            </div>
+
+            
+        <!--rigth end-->
+
+    </div>
+    
+    <script src="./script.js"></script>
+</body>
+</html>

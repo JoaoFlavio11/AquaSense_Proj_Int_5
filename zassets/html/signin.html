@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../css/signin.css" />
+    <title>tela de Login</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="card">
+            <h1>Entre agora!</h1>
+
+            <div class="msgError"></div>
+
+            <div class="label-float">
+                <input type="text" id="usuario" placeholder=""required>
+                <label id="userLabel" for="usuario">Usuário</label>
+            </div>
+
+            <div class="label-float">
+                <input type="password" placeholder="" id="senha"required>
+                <label id="senhaLabel" for="senha">Senha</label>
+            </div>
+
+            <div class="justify-center">
+                <button onclick="entrar()">Entrar</button>
+            </div>
+
+            <div class="justify-center">
+                <hr>
+            </div>
+
+            <p>
+                Ainda não tem uma conta?
+                <a href="../html/signup.html">Cadastre-se aqui</a>
+            </p>
+
+        </div>
+    </div>
+    
+    <script src="../js/signin.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";></script>
+    <script>
+    const firebaseConfig = {
+        apiKey: "AIzaSyCnhzvhJTgxM_oIH2I9VrirpJ3ZyYxsFYY",
+        authDomain: "monitoramento-de-tanque-347a4.firebaseapp.com",
+        projectId: "monitoramento-de-tanque-347a4",
+        storageBucket: "monitoramento-de-tanque-347a4.appspot.com",
+        messagingSenderId: "650661883198",
+        appId: "1:650661883198:web:ea8d03d77f8c0bf2e2506f"
+    };
+    firebase.initializeApp(firebaseConfig);
+
+    
+
+    </script>
+
+</body>
+
+</html>

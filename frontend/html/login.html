@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
+<<<<<<< HEAD
     <title>Login</title>
     <link rel="stylesheet" href="../css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+=======
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/forms.css">
+    <title>Login - AquaSense</title>
+>>>>>>> baseFront
 </head>
-
 <body>
     <div class="container">
+<<<<<<< HEAD
         <h2>Login</h2>
         <form id="login-form">
             <div class="mb-3">
@@ -23,9 +28,51 @@
             <button type="submit" class="btn btn-primary">Entrar</button>
         </form>
         <p>Não tem uma conta? <a href="register.html">Cadastre-se aqui</a>.</p>
+=======
+        <div class="loading" id="loading">
+            
+            <h3>Carregando &nbsp;</h3>
+            <div class="spinner"></div>
+        </div>
+        <form action="">
+            <div class="top">
+                <h1>Aqua<span class="aquas">Sense</span></h1>
+            </div>
+            <div class="form-field">
+                <div class="label-email">
+                    <label for="email">E-mail:</label>
+                </div>
+                <input type="email" name="email" onchange="onChangeEmail()" id="email" placeholder="Digite aqui">
+                <div class="error" id="email-required-error">Este campo é obrigatório.</div>
+                <div class="error" id="email-invalid-error">E-mail inválido!</div>
+            </div>
+
+            <div class="form-field">
+                <div>
+                    <label for="password">Senha:</label>
+                </div>
+                <input type="password" name="password" onchange="onChangePassword()" id="password" placeholder="Digite aqui">
+                <div class="error" id="password-required-error">Este campo é obrigatório.</div>
+            </div>
+
+            <div class="btn-box">
+                <button type="button" class="clear" id="recover-password-btn" disabled="true"> <b>Esqueceu a senha ?</b> </button>
+            </div>
+
+            <div>
+                <button type="button" class="solid" id="login-btn" disabled> <b>Entrar</b> </button>
+            </div>
+
+            <div>
+                <a href="http://localhost:3000/registro" target="_blank" rel="noopener noreferrer">
+                    <button type="button"  class="outline" id="register-btn"> <b>Registre-se</b> </button>
+                </a>
+            </div>
+        </form>
+>>>>>>> baseFront
     </div>
 
     <script src="../js/login.js"></script>
+    <script src="../firebase/firebaseScripts.js" type="module"></script>
 </body>
-
 </html>

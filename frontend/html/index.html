@@ -1,15 +1,18 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Monitoramento de Tanques</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <title>Página Inicial</title>
     
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ce03E+P6jtzOdw+NjyAAFRWx2+UQE7xay1e39+f/7JW1J8Lkfj" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/index.css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
+
+
 <body>
+<<<<<<< HEAD
     <header class="bg-primary text-white p-3">
         <h1>Monitoramento de Tanques</h1>
     </header>
@@ -24,18 +27,97 @@
     <div class="container-box ml-5 mr-5">
         <div id="tabelas-tanques" class="container my-3">
             <!-- As tabelas de tanques serão inseridas aqui pelo JavaScript -->
+=======
+    <aside>
+
+        <div class="top">
+            <h1>Aqua<span class="aquas">Sense</span></h1>
+>>>>>>> baseFront
         </div>
+
+        <!--Sidebar-->
+        <div class="sidebar">
+            
+            <a href="http://localhost:3000/paginaInicial">
+                <span class="material-symbols-outlined">grid_view</span>
+                <h3>Painel</h3>
+            </a>
+
+            <a href="http://localhost:3000/temperatura">
+                <span class="material-symbols-outlined">
+                    insert_chart
+                </span>
+                <h3>Temperatura dos Tanques</h3>
+            </a>
+
+            <a href="">
+                <span class="material-symbols-outlined">settings</span>
+                <h3>Configurações</h3>
+            </a>
+
+            <a href="http://localhost:3000/">
+                <span class="material-symbols-outlined">logout</span>
+                <h3>Sair</h3>
+            </a>
+        </div>
+        <!--Sidebar end-->
+    </aside>
+
+    <div class="container-tables">
+        <div id="tabelas-tanques">
+
+        </div>
+
+        <!--Inicio atualizações recentes-->
+        <div class="atualizacoes-recentes">
+            <div class="atualizacoes">
+                <div class="atualizacao">
+                    <div class="foto-tanq">
+                        <img src="../assets/imgs/tanque.png" alt="tanque" >
+                    </div>
+                    <div class="mensagem">
+                        <p><b>Tanque 1</b></p>
+                        <p>Ativo novamente!</p>
+                    </div>
+                </div>
+
+                <div class="atualizacao">
+                    <div class="foto-tanq">
+                        <img src="../assets/imgs/tanque.png" alt="tanque" >
+                    </div>
+                    <div class="mensagem">
+                        <p><b>Tanque 2</b></p>
+                        <p>Temperatura ideal!</p>
+                    </div>
+                </div>
+
+                <div class="atualizacao">
+                    <div class="foto-tanq">
+                        <img src="../assets/imgs/tanque.png" alt="tanque" >
+                    </div>
+                    <div class="mensagem">
+                        <p><b>Tanque 3</b></p>
+                        <p>Perfeitas Condições.</p>
+                    </div>
+                </div>
+
+                <div class="atualizacao">
+                    <div class="foto-tanq">
+                        <img src="../assets/imgs/tanque.png" alt="tanque" >
+                    </div>
+                    <div class="mensagem">
+                        <p><b>Tanque 4</b></p>
+                        <p>Monitorar pH.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!--FIM atualizações recentes-->
+
     </div>
 
-    <footer class=" footer">
-        <p>Aquasense &copy; 2024 - Todos os direitos reservados</p>
-    </footer>
-
-    <!-- Importando os scripts do Bootstrap do CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-TJkgD8h0um9CKW1k21ng5yJ2LQ3CZ6ft9kMffq69ZKHB3c+ft3K2l19QXnYN5e" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fkIhblF4odkK/xkO2aYBicNVZcnnnW3SBt6UP1v/jGO1W3E" crossorigin="anonymous"></script>
-
-    <!-- Seu script JavaScript -->
-    <script src="../js/sript.js"></script>
+    <script src="../js/sriptTabelas.js"></script>
+    <script src="../js/baseWeb.js"></script>
 </body>
+
 </html>
