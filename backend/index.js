@@ -4,22 +4,22 @@ const admin = require('firebase-admin');
 
 const app = express();
 
-// Caminho para o arquivo JSON de credenciais do Firebase Admin SDK
-const serviceAccount = require('../chave-sdk/monitoramento-de-tanque-347a4-firebase-adminsdk-6fubm-dcc62cd1bb.json');
+//arquivo JSON credenciais do Firebase Admin SDK
+const serviceAccount = require('./firebase/monitoramento-de-tanque-347a4-firebase-adminsdk-6fubm-dcc62cd1bb.json');
 
 // Inicialize o Firebase com as credenciais
 admin.initializeApp({
     credential: admin.credential.cert(serviceAccount),
-    databaseURL: 'https://monitoramento-de-tanque.firebaseio.com' // Altere para o URL do seu banco de dados
+    databaseURL: 'https://monitoramento-de-tanque.firebaseio.com' //URL do bd
 });
 
 const db = admin.firestore();
 
-// Servir arquivos estáticos a partir da pasta 'frontend'
+// arquivos estáticos diretos da pasta 'frontend'
 const frontendPath = path.join(__dirname, '../frontend');
 app.use(express.static(frontendPath));
 
-// Rota para obter todos os dados do tanque de água
+// Rota para pegar os dados do tanque de água
 app.get('/dados', async (req, res) => {
     try {
         const dadosSnapshot = await db.collection('tanque').get();
@@ -130,5 +130,6 @@ inserirDados();
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`Servidor rodando na porta ${PORT}`);
-    console.log(`Clique aqui: http://localhost:${PORT}`);
+    console.log(`Clique abaixo para acessar o servidor!`);
+    console.log(`http://localhost:${PORT}`);
 });
