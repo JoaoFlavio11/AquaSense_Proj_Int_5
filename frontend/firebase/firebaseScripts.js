@@ -91,8 +91,7 @@ document.getElementById('recover-password-btn').onclick = function() {
 
 
 //criar conta 
-//criar amanha  
-
+//TODO: fazer a função de registrar
 
 
 
