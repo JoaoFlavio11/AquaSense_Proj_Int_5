@@ -92,6 +92,10 @@ app.get('/temperatura', (req, res) => {
     res.sendFile(path.join(frontendPath, 'html', 'temperatura.html'));
 });
 
+//rota para os gráficos do pH da água
+app.get('/ph', (req, res) => {
+    res.sendFile(path.join(frontendPath, 'html', 'ph.html'));
+});
 //criar outras rotas
 
 
@@ -104,20 +108,28 @@ async function inserirDados() {
 
     // Formatar a data
     const dataAtual = new Date();
-    const dataFormatada = dataAtual.toLocaleString('pt-BR', {
+    const formatoOriginal = dataAtual.toLocaleString('pt-BR', {
         day: '2-digit',
         month: '2-digit',
+        year: '2-digit',
         hour: '2-digit',
-        minute: '2-digit'
+        minute: '2-digit',
     });
+    
+    // Substituir o separador padrão
+    const formatoPersonalizado = formatoOriginal.replace(', ', '| ');
 
     // Insere um novo documento na coleção "tanque"
     await docRef.set({
-        timestamp: dataFormatada,
+        timestamp: formatoPersonalizado,
         nome: "Tanque12",
-        nivelAgua: 50,
-        temperatura: 10.3,
+        completo: true,
         funcionando: false,
+        temperatura: 20.3,
+        ph: 8.7,
+        // campos editados: 
+        // nivelAgua: 50 -> cheio: true
+        // adição campo: ph
     });
 
     console.log('Dados inseridos com sucesso!');

@@ -6,71 +6,54 @@
     <title>Gráficos</title>
     
     <link rel="stylesheet" href="../css/index.css">
-
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-
+    
     <!-- Chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
-
 <body>
     <aside>
-
         <div class="top">
             <h1>Aqua<span class="aquas">Sense</span></h1>
-            <!--
-                <div class="end" id="end">
-                    <span class="material-symbols-outlined">close</span>
-                </div>
-            --> 
         </div>
 
-        <!--Sidebar-->
+        <!-- Sidebar -->
         <div class="sidebar">
-            
             <a href="http://localhost:3000/paginaInicial">
                 <span class="material-symbols-outlined">grid_view</span>
                 <h3>Painel</h3>
             </a>
-
             <a href="http://localhost:3000/temperatura">
-                <span class="material-symbols-outlined">
-                    insert_chart
-                </span>
+                <span class="material-symbols-outlined">insert_chart</span>
                 <h3>Temperatura dos Tanques</h3>
             </a>
-
             <a href="http://localhost:3000/ph">
                 <span class="material-symbols-outlined">bid_landscape</span>
                 <h3>pH dos Tanques</h3>
             </a>
-
             <a href="http://localhost:3000/">
                 <span class="material-symbols-outlined">logout</span>
                 <h3>Sair</h3>
             </a>
         </div>
-        <!--Sidebar end-->
+        <!-- Sidebar end -->
     </aside>
 
     <div class="container-tables">
         <div class="top">
-            <h1>Temperatura dos Tanques</h1>
-    
+            <h1>pH da Água dos Tanques</h1>
         </div>
 
         <div class="graficos">
-            <!-- Gráficos de tanques -->
+            <!-- Gráficos de pH dos tanques -->
             <div id="graficos-tanques" class="graficos-tanques">
                 <!-- Aqui serão adicionados os gráficos dinamicamente -->
             </div>
-        
         </div>
-        
     </div>
 
-    <script src="../js/scriptTemp.js"></script>
+    <script src="../js/scriptPh.js"></script>
 </body>
 
 </html>

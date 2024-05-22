@@ -69,7 +69,9 @@ async function criarGraficosPorTanque() {
                 labels: dadosTanque.map(dado => dado.timestamp), // Usar o timestamp como rótulo
                 datasets: [{
                     data: dadosTanque.map(dado => dado.temperatura), // Usar a temperatura como dados
-                    backgroundColor: 'blue', // Cor laranja para o gráfico
+                    backgroundColor: 'blue', // Cor verde para o gráfico
+                    borderColor: 'black',
+                    fill: false,
                 }],
             };
 

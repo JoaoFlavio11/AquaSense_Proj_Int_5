@@ -107,7 +107,6 @@ h4{
 }
 
 
-
 .container-tables{
     position: absolute;
     top: 0;
@@ -225,7 +224,11 @@ th {
 #temperaturaChartTanque10,
 #temperaturaChartTanque15,
 #temperaturaChartTanque11,
-#temperaturaChartTanque12 {
+#temperaturaChartTanque12,
+#phChartTanque10,
+#phChartTanque11,
+#phChartTanque12,
+#phChartTanque15 {
     background-color: #fff;
     border-radius: var(--border-radius-cartao);
     padding: 10px;
