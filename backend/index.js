@@ -72,11 +72,6 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(frontendPath, 'html', 'login.html'));
 });
 
-//rota para a página de registro
-app.get('/registro', (req, res) => {
-    res.sendFile(path.join(frontendPath, 'html', 'registro.html'));
-});
-
 //rota para recuperar senha
 app.get('/recuperarSenha', (req, res) => {
     res.sendFile(path.join(frontendPath, 'html', 'recuperarSenha.html')); 
@@ -117,16 +112,16 @@ async function inserirDados() {
     });
     
     // Substituir o separador padrão
-    const formatoPersonalizado = formatoOriginal.replace(', ', '| ');
+    const formatoPersonalizado = formatoOriginal.replace(', ', ' | ');
 
     // Insere um novo documento na coleção "tanque"
     await docRef.set({
         timestamp: formatoPersonalizado,
-        nome: "Tanque12",
+        nome: "Tanque10",
         completo: true,
         funcionando: false,
         temperatura: 20.3,
-        ph: 8.7,
+        ph: 1.7,
         // campos editados: 
         // nivelAgua: 50 -> cheio: true
         // adição campo: ph
