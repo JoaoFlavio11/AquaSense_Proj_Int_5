@@ -96,43 +96,6 @@ app.get('/ph', (req, res) => {
 
 
 
-
-//teste
-async function inserirDados() {
-    const docRef = db.collection('tanque').doc();
-
-    // Formatar a data
-    const dataAtual = new Date();
-    const formatoOriginal = dataAtual.toLocaleString('pt-BR', {
-        day: '2-digit',
-        month: '2-digit',
-        year: '2-digit',
-        hour: '2-digit',
-        minute: '2-digit',
-    });
-    
-    // Substituir o separador padrão
-    const formatoPersonalizado = formatoOriginal.replace(', ', ' | ');
-
-    // Insere um novo documento na coleção "tanque"
-    await docRef.set({
-        timestamp: formatoPersonalizado,
-        nome: "Tanque10",
-        completo: true,
-        funcionando: false,
-        temperatura: 20.3,
-        ph: 1.7,
-        // campos editados: 
-        // nivelAgua: 50 -> cheio: true
-        // adição campo: ph
-    });
-
-    console.log('Dados inseridos com sucesso!');
-}
-
-// Chame a função para inserir dados
-inserirDados();
-
 // Inicie o servidor na porta 3000
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {

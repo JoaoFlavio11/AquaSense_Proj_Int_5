@@ -11,6 +11,20 @@ body {
     margin-right: 2%;
 }
 
+::-webkit-scrollbar{
+    width: 13px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--cor-aqua-escuro); /* Cor azul para o trilho */
+    border-radius: 10px; /* Bordas arredondadas */
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--cor-scrollbar); /* Cor cinza para o polegar */
+    border-radius: 10px; /* Bordas arredondadas */
+}
+
 .aquas {
     color: var(--cor-aquas);
 }
