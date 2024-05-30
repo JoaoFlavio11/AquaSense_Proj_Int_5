@@ -117,7 +117,7 @@ async function inserirDados() {
     // Insere um novo documento na coleção "tanque"
     await docRef.set({
         timestamp: formatoPersonalizado,
-        nome: "Tanque10",
+        nome: "Tanque12",
         completo: true,
         funcionando: false,
         temperatura: 20.3,
