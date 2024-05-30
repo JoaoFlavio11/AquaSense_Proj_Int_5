@@ -90,6 +90,5 @@ document.getElementById('recover-password-btn').onclick = function() {
 }
 
 
- 
-//TODO: criar conta
+
 

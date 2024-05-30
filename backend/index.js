@@ -43,7 +43,7 @@ app.get('/dados', async (req, res) => {
 
 // Rota para obter dados do tanque de água filtrados por data
 app.get('/dadosFiltrados', async (req, res) => {
-    try {
+    try { 
         const { startDate, endDate } = req.query;
         // Aqui você deve implementar a lógica para buscar dados filtrados por data no seu banco de dados
         // Por exemplo, consulte o banco de dados usando startDate e endDate
