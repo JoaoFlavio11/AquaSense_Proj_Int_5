@@ -13,6 +13,7 @@ body {
     height: 100vh;
 }
 
+
 .top, .top2{
     background-color: var(--cor-background);
     display: flex;
