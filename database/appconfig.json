@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "monitoramento-de-tanque-347a4",
+  "private_key_id": "dcc62cd1bb4675ff48fec3b627e33284f56f8a1c",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQChA8NIP5uwCHGW\nr0waO4HHHr+d5LbKeR/MWyvVJSkXbTpEQ4CkEmzlqOkrQ3vzKhpjCPHzClfvAqvs\nviU72Suwm+YnuLKXw1ny+TH89C+fFRnSNrVU4bTbKsls/J1GKFw7BZNlSZ2p8/q5\nQqFoABvEdMKxrrj4Fmd5WNX4Pv6LM2EcTVqmBlEoUTJEHSmwkk+cdSpVSMpQJFV8\nXN43huOxixX3LMdCeeWmgbwSu7obS2PfcfE6Wab6TgqysajFgzKWgxplw2Ay8GFy\nd68rnebttjOqUjb7RLPnOYNoVJnY8YwSh+kCsSOjXV1bYD1nP2iVhSnoz+Xsk7rF\ngVN+PKVjAgMBAAECggEAMDpeTc+vpGSDEW1kUB8u2iOdpX+SOMda/Oz6DhfZXQj8\ngOHvMDXMpGWZobnO8KDV0oAlaHTard6Q/JJfuLNt4LJxl8g8xjRfRuXZUTka4n2B\nhHOakNgiQdtpBdoMia0hIxSid547OWK44LDSg8I0jv2iK3J4OOcNC03OmVLVD4BT\n7Q5rL16jKOzb2MUV75wOUdaiAGCZ/8XUyKgswlqFj5i3B5Q1g/qKOskpjMn5EZhO\nqd1RP/8IakP0CuCN44nWub2M6Doqc3byCg1WCMltEC5zRJlHgrNljTGpQE/WP9I/\n7y+UkQro772mTPBpKSizlvQjhSpKOHv+oDmmjyd6UQKBgQDh/thvuZkq1A+ZNQqc\nX+Gxuo8EZwQgrLC1tVj+bZrPDKICu2tRzMxLepw7Cw5edQj9wBg7gOH/cpHQKnpi\nb2RE0s/Z80Wzjn75S7JO0KCljWXbGYgp73A/FBBeWLNaYvH4k8zfzcRj6aQ5PddQ\nK0XsLxwe7Q2y5xNmwaSlo2UNBQKBgQC2ZFgymeCi4P9P5vix7Q4E6OcdhNxhOn9u\nqFsMsiueaRmAkUpMsLPBRykhsvD3PMOBCZJfZngXqwvUGF3DN+UMVrKeCMOydq0Q\nZZX7ujk/RMbsn1YPf4vW3IIvSSdbX6pKGy4QKaNNAYv93ubFNAVsBlNqEDWzY7wR\nmynE0rQ1RwKBgERSjFJylNi61aBmxbdy0UOu9+/HyRqrupykn6wDrMqtsgkLai2H\nsbeb8MF03To3PamhOnI6y5gzpdt+DBPYQ0L/TLFCd68KBF8PwG9NaVPDhKiRdnXf\nGlsnkK9FN6u6wBZ7cHO0vIvMJcbcaEynWHNH5sN+vSZ574agQkuFM1aVAoGAOQkc\nA4bXFlghvszNjGZC8goa68I2YDk4zFPdVRUKStk23luQznabX59vH1ijvczEnj9u\nBGM4vr4ATuzntTpvZ/JcnMrE17QA3pXF1xge+sf5JNmWwfXyttfx5fOMWSiLSe1B\n9E/w/w2yx0rDA3wHDgbUYuB6yoQvtZm98AyrydUCgYAMnSxnG6J340UBKLyK6fra\njJQKdF4s3nJj1oIr00p2DvpxZoh2NOvkRcKsbKQuNck7b1qrksJGdjJcmRo7xFCy\nx7ziEQI0Y1MyDtIO4kDSECLe+j+361mPF+vgmI3KkTi7XpOCMaAJBCmU8ldDrS6n\nKJy7SDrptq/qZKrFYpysWw==\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-6fubm@monitoramento-de-tanque-347a4.iam.gserviceaccount.com",
+  "client_id": "118392224246681139349",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-6fubm%40monitoramento-de-tanque-347a4.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
