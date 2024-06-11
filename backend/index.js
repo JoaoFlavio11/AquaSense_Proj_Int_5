@@ -5,12 +5,12 @@ const admin = require('firebase-admin');
 const app = express();
 
 // arquivo JSON credenciais do Firebase Admin SDK
-const serviceAccount = require('./firebase/monitoramento-de-tanque-347a4-firebase-adminsdk-6fubm-dcc62cd1bb.json');
+const serviceAccount = require('');// caminho do arquivo firebase admin sdk.json
 
 // Inicialize o Firebase com as credenciais
 admin.initializeApp({
     credential: admin.credential.cert(serviceAccount),
-    databaseURL: 'https://monitoramento-de-tanque.firebaseio.com' // URL do bd
+    databaseURL: 'https://.firebaseio.com' // URL do bd
 });
 
 const db = admin.firestore();
