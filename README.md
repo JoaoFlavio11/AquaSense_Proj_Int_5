@@ -48,6 +48,9 @@ Neste projeto, desenvolvemos um sistema de monitoramento de tanques de água uti
 - `backend/node_modules`: Dependências do Node.js.
 - `backend/package.json`: Arquivo de configuração do Node.js.
 
+### Connection
+- `codigo_aquasense_IoT.ino`: Código que é executado no ESP32.
+
 ### Database
 - `database/appconfig.json`: Configurações da aplicação.
 - `database/tanque.json`: Dados simulados do tanque.

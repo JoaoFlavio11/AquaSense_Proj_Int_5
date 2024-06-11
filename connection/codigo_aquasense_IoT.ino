@@ -8,7 +8,7 @@
 
 const char* ssid = "";
 const char* password = "";
-const char* serverName = "http://172.20.10.4:3000/gravarDados";
+const char* serverName = "http://xxx.xx.xx.x:3000/gravarDados";
 
 void conectarWiFi(const char* ssid, const char* password)
 {
@@ -124,7 +124,7 @@ void enviarDados(float temperatura, float valor_pH, int waterLevel)
   if (WiFi.status() == WL_CONNECTED) 
   {
     HTTPClient http;
-    const char* serverName = "http://172.20.10.4:3000/gravarDados"; // URL do servidor
+    const char* serverName = "http://xxx.xx.xx.x:3000/gravarDados"; // URL do servidor
     http.begin(serverName);
     http.addHeader("Content-Type", "application/json");
     String completo = (waterLevel == LOW) ? "true" : "false"; // Define o valor de "completo" com base no nível de água
