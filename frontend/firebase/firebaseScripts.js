@@ -4,12 +4,12 @@ import { getAuth, signInWithEmailAndPassword, sendPasswordResetEmail, createUser
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyCnhzvhJTgxM_oIH2I9VrirpJ3ZyYxsFYY",
-    authDomain: "monitoramento-de-tanque-347a4.firebaseapp.com",
-    projectId: "monitoramento-de-tanque-347a4",
-    storageBucket: "monitoramento-de-tanque-347a4.appspot.com",
-    messagingSenderId: "650661883198",
-    appId: "1:650661883198:web:ea8d03d77f8c0bf2e2506f"
+    apiKey: "", // seus dados do firebase
+    authDomain: "",
+    projectId: "",
+    storageBucket: "",
+    messagingSenderId: "",
+    appId: ""
 };
 
 // Initialize Firebase
